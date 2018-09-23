@@ -3,6 +3,11 @@ MAINTAINER David Young <davidy@funkypenguin.co.nz>
 #Based on the work of needo <needo@superhero.org>
 #ENV DEBIAN_FRONTEND noninteractive
 
+# BUILD_DATE and VCS_REF are immaterial, since this is a 2-stage build, but our build
+# hook won't work unless we specify the args
+ARG BUILD_DATE
+ARG VCS_REF
+
 # Set correct environment variables
 ENV HOME /root
 
